@@ -1,10 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
+import createReactClass from 'create-react-class'
+import PropTypes from 'prop-types'
 import invariant from 'invariant'
 import { createRouteFromReactElement } from './RouteUtils'
 import { formatPattern } from './PatternUtils'
 import { falsy } from './InternalPropTypes'
 
-const { string, object } = React.PropTypes
+const { string, object } = PropTypes
 
 /**
  * A <Redirect> is used to declare another URL path a client should
@@ -13,10 +16,10 @@ const { string, object } = React.PropTypes
  * Redirects are placed alongside routes in the route configuration
  * and are traversed in the same manner.
  */
-const Redirect = React.createClass({
+const Redirect = createReactClass({
 
   statics: {
-    
+
     createRouteFromReactElement(element) {
       const route = createRouteFromReactElement(element)
 

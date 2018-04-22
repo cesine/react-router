@@ -1,15 +1,18 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
+import createReactClass from 'create-react-class'
 import warning from './routerWarning'
 import invariant from 'invariant'
 import Redirect from './Redirect'
 import { falsy } from './InternalPropTypes'
+import PropTypes from 'prop-types'
 
-const { string, object } = React.PropTypes
+const { string, object } = PropTypes
 
 /**
  * An <IndexRedirect> is used to redirect from an indexRoute.
  */
-const IndexRedirect = React.createClass({
+const IndexRedirect = createReactClass({
 
   statics: {
 

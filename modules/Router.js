@@ -1,7 +1,9 @@
+import React from 'react'
 import createHashHistory from 'history/lib/createHashHistory'
+import createReactClass from 'create-react-class'
 import useQueries from 'history/lib/useQueries'
 import invariant from 'invariant'
-import React from 'react'
+import PropTypes from 'prop-types'
 
 import createTransitionManager from './createTransitionManager'
 import { routes } from './InternalPropTypes'
@@ -20,14 +22,14 @@ function isUnsupportedHistory(history) {
   return history && history.getCurrentLocation
 }
 
-const { func, object } = React.PropTypes
+const { func, object } = PropTypes
 
 /**
  * A <Router> is a high-level API for automatically setting up
  * a router that renders a <RouterContext> with all the props
  * it needs each time the URL changes.
  */
-const Router = React.createClass({
+const Router = createReactClass({
 
   propTypes: {
     history: object,

@@ -1,7 +1,8 @@
-import warning from './routerWarning'
-import React from 'react'
+import PropTypes from 'prop-types'
 
-const { object } = React.PropTypes
+import warning from './routerWarning'
+
+const { object } = PropTypes
 
 /**
  * The RouteContext mixin provides a convenient way for route
